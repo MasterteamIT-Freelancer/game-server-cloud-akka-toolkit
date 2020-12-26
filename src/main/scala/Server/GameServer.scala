@@ -16,17 +16,6 @@ object GameServer extends App {
   val port = 54000
 
   val connections: Source[IncomingConnection, Future[ServerBinding]] = Tcp().bind(host, port)
-//  connections.runForeach { connection =>
-//    println(s"New connection from: ${connection.remoteAddress}")
-//    val echo = Flow[ByteString]
-//      .via(Framing.delimiter(ByteString("\n"), maximumFrameLength = 256, allowTruncation = true))
-//      .map(_.utf8String)
-//      .map(_ + "!!!\n")
-//      .map(ByteString(_))
-//
-//    connection.handleWith(echo)
-//  }
-
   connections
     .to(Sink.foreach { connection =>
       // server logic, parses incoming commands
