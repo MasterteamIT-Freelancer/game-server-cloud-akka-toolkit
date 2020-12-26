@@ -1,0 +1,4 @@
+[debug] not up to date. inChanged = true, force = false
+[debug] Updating ProjectRef(uri("file:/E:/DevGame/Networks/AkkaToolkit/"), "akkatoolkit")...
+[debug] Done updating ProjectRef(uri("file:/E:/DevGame/Networks/AkkaToolkit/"), "akkatoolkit")
+[warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.
